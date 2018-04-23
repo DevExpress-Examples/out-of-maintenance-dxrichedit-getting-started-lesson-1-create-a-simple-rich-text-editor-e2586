@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
+        Title="Simple Rich Text Editor" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <dxre:RichEditControl Name="richEditControl1" 
+                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                              Grid.Column="1" />
+        <Button Name="NewDocumentButton"  
+                Margin="12,12,12,0" Height="23" Width="75"
+                VerticalAlignment="Top"
+                Grid.Column="0"
+                Content="New"
+                Click="NewDocumentButton_Click" />
+
+        <Button Name="SaveDocumentButton" 
+                Margin="12,39,12,0" Height="23" Width="75"
+                VerticalAlignment="Top"
+                Grid.Column="0"
+                Content="Save"
+                Click="SaveDocumentButton_Click" />
+
+        <Button Name="LoadDocumentButton" 
+                Margin="12,66,12,0" Height="23" Width="75"
+                VerticalAlignment="Top"
+                Grid.Column="0"
+                Content="Load"
+                Click="LoadDocumentButton_Click" />
+    </Grid>
+</Window>
